@@ -75,5 +75,5 @@ E := K;
 B := fatorial(5);
 C := exp(A,B);
 D := media(E);
-F := lerDados()
+F := lerDados(G)
 end

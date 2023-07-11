@@ -29,6 +29,7 @@ def generate_intermediate_code(node):
                 labelWhile = f"label{label_counter}"
                 label_counter += 1
                 labelEndWhile = f"label{label_counter}"
+                label_counter += 1
                 exp_logica = node[2]
                 bloco = node[3]
                 #label inicio while
@@ -51,18 +52,25 @@ def generate_intermediate_code(node):
         
                 generate_intermediate_code(node[4]) #bloco
                 intermediate_code.append(f"LBL {labelIFFalse} - -")
-
                 generate_intermediate_code(node[5]) #else
                 
 
            
             elif node[1] == 'write':
-                generate_intermediate_code(node[2]) #const_valor
+                temp = generate_intermediate_code(node[2]) #const_valor
+                intermediate_code.append(f"WRITE {temp} -")
 
             elif node[1] == 'read':
                 id = node[2]
-                nome = node[3]
-                generate_intermediate_code(nome)                
+                nome = node[3]                
+                generate_intermediate_code(nome)             
+                if nome[1] is not None:
+                    if nome[1] == '.':
+                        pontoP = nome[2]
+                        intermediate_code.append(f"READ {id}.{pontoP}")
+                else:
+                    intermediate_code.append(f"READ {id}")
+
 
             elif len(node) == 5 and node[3] == ':=':
                 id = node[1]
@@ -70,8 +78,7 @@ def generate_intermediate_code(node):
                 temp = generate_intermediate_code(exp_mat)
                 intermediate_code.append(f"ATR {id} {temp}")
                
-        elif node[0] == 'EXP_LOGICA':
-            
+        elif node[0] == 'EXP_LOGICA':            
 
             if len(node) == 4:     
                 tempA = generate_intermediate_code(node[1]) #exp_mat   
@@ -145,8 +152,13 @@ def generate_intermediate_code(node):
             else:                                  
                 temp = f"temp{temp_counter}"
                 temp_counter += 1
-                intermediate_code.append(f"ATR {temp} {param} -")                
-                generate_intermediate_code(node[2])
+                if node[2][1] == '(':                                   
+                    generate_intermediate_code(node[2]) #nome
+                    intermediate_code.append(f"CALL {param} - -")
+                    intermediate_code.append(f"ATR {temp} {param} -") 
+                else:
+                    intermediate_code.append(f"ATR {temp} {param} -")                
+                    generate_intermediate_code(node[2]) #nome
                 return temp
 
         elif node[0] == 'BLOCO':
@@ -161,15 +173,18 @@ def generate_intermediate_code(node):
                 generate_intermediate_code(node[2]) #comando
                 generate_intermediate_code(node[3]) #lista_com
         
-        elif node[0] == "ELSE":
-           if node[1] is not None:
-                generate_intermediate_code(node[2])
+        elif node[0] == "SIN_ELSE":
+           
+           if node[1] is not None:                
+                generate_intermediate_code(node[2]) #BLOCO
         
         elif node[0] == 'CONST_VALOR':
            
             if node[1][0] == 'EXP_MAT_AUX':                
                 temp = generate_intermediate_code(node[1]) #EXP_MAT_AUX                 
-                return temp
+            else:
+                temp = f'"{node[1]}"' 
+            return temp
             
         elif node[0] == 'DECLARACOES':
             def_const = node[1]
@@ -191,6 +206,7 @@ def generate_intermediate_code(node):
             if node[1] is not None:
                 generate_intermediate_code(node[1]) #FUNCAO
                 generate_intermediate_code(node[2]) #def_func
+
         elif node[0] == 'FUNCAO':
             generate_intermediate_code(node[2]) #nome_funcao
             generate_intermediate_code(node[3]) #bloco_func
