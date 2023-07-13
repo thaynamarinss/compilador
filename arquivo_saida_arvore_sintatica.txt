@@ -1,0 +1,836 @@
+PROGRAMA
+├── DECLARACOES
+│   ├── DEF_CONST
+│   │   ├── CONSTANTE
+│   │   │   ├── const
+│   │   │   ├── TAM
+│   │   │   ├── =
+│   │   │   ├── CONST_VALOR
+│   │   │   │   └── EXP_MAT_AUX
+│   │   │   │       └── PARAMETRO
+│   │   │   │           └── 10
+│   │   │   └── ;
+│   │   └── DEF_CONST
+│   │       └── None
+│   ├── DEF_TIPOS
+│   │   ├── TIPO
+│   │   │   ├── type
+│   │   │   ├── vetor
+│   │   │   ├── =
+│   │   │   ├── TIPO_DADO
+│   │   │   │   ├── array
+│   │   │   │   ├── [
+│   │   │   │   ├── 15
+│   │   │   │   ├── ]
+│   │   │   │   ├── of
+│   │   │   │   └── TIPO_DADO
+│   │   │   │       └── integer
+│   │   │   └── ;
+│   │   └── DEF_TIPOS
+│   │       ├── TIPO
+│   │       │   ├── type
+│   │       │   ├── aluno
+│   │       │   ├── =
+│   │       │   ├── TIPO_DADO
+│   │       │   │   ├── record
+│   │       │   │   ├── CAMPOS
+│   │       │   │   │   ├── nota1
+│   │       │   │   │   ├── :
+│   │       │   │   │   ├── TIPO_DADO
+│   │       │   │   │   │   └── real
+│   │       │   │   │   └── LISTA_CAMPOS
+│   │       │   │   │       ├── ;
+│   │       │   │   │       ├── CAMPOS
+│   │       │   │   │       │   ├── nota2
+│   │       │   │   │       │   ├── :
+│   │       │   │   │       │   ├── TIPO_DADO
+│   │       │   │   │       │   │   └── real
+│   │       │   │   │       │   └── LISTA_CAMPOS
+│   │       │   │   │       │       └── None
+│   │       │   │   │       └── LISTA_CAMPOS
+│   │       │   │   │           └── None
+│   │       │   │   └── end
+│   │       │   └── ;
+│   │       └── DEF_TIPOS
+│   │           └── None
+│   ├── DEF_VAR
+│   │   ├── VARIAVEL
+│   │   │   ├── var
+│   │   │   ├── A
+│   │   │   ├── LISTA_ID
+│   │   │   │   ├── ,
+│   │   │   │   ├── B
+│   │   │   │   └── LISTA_ID
+│   │   │   │       ├── ,
+│   │   │   │       ├── C
+│   │   │   │       └── LISTA_ID
+│   │   │   │           ├── ,
+│   │   │   │           ├── D
+│   │   │   │           └── LISTA_ID
+│   │   │   │               └── None
+│   │   │   ├── :
+│   │   │   ├── TIPO_DADO
+│   │   │   │   └── integer
+│   │   │   └── ;
+│   │   └── DEF_VAR
+│   │       ├── VARIAVEL
+│   │       │   ├── var
+│   │       │   ├── E
+│   │       │   ├── LISTA_ID
+│   │       │   │   └── None
+│   │       │   ├── :
+│   │       │   ├── TIPO_DADO
+│   │       │   │   └── vetor
+│   │       │   └── ;
+│   │       └── DEF_VAR
+│   │           ├── VARIAVEL
+│   │           │   ├── var
+│   │           │   ├── K
+│   │           │   ├── LISTA_ID
+│   │           │   │   └── None
+│   │           │   ├── :
+│   │           │   ├── TIPO_DADO
+│   │           │   │   └── vetor
+│   │           │   └── ;
+│   │           └── DEF_VAR
+│   │               ├── VARIAVEL
+│   │               │   ├── var
+│   │               │   ├── F
+│   │               │   ├── LISTA_ID
+│   │               │   │   └── None
+│   │               │   ├── :
+│   │               │   ├── TIPO_DADO
+│   │               │   │   └── aluno
+│   │               │   └── ;
+│   │               └── DEF_VAR
+│   │                   └── None
+│   └── DEF_FUNC
+│       ├── FUNCAO
+│       │   ├── function
+│       │   ├── NOME_FUNCAO
+│       │   │   ├── fatorial
+│       │   │   ├── PARAM_FUNC
+│       │   │   │   ├── (
+│       │   │   │   ├── CAMPOS
+│       │   │   │   │   ├── a
+│       │   │   │   │   ├── :
+│       │   │   │   │   ├── TIPO_DADO
+│       │   │   │   │   │   └── integer
+│       │   │   │   │   └── LISTA_CAMPOS
+│       │   │   │   │       └── None
+│       │   │   │   └── )
+│       │   │   ├── :
+│       │   │   └── TIPO_DADO
+│       │   │       └── integer
+│       │   └── BLOCO_FUNCAO
+│       │       ├── DEF_VAR
+│       │       │   ├── VARIAVEL
+│       │       │   │   ├── var
+│       │       │   │   ├── a
+│       │       │   │   ├── LISTA_ID
+│       │       │   │   │   └── None
+│       │       │   │   ├── :
+│       │       │   │   ├── TIPO_DADO
+│       │       │   │   │   └── integer
+│       │       │   │   └── ;
+│       │       │   └── DEF_VAR
+│       │       │       ├── VARIAVEL
+│       │       │       │   ├── var
+│       │       │       │   ├── i
+│       │       │       │   ├── LISTA_ID
+│       │       │       │   │   └── None
+│       │       │       │   ├── :
+│       │       │       │   ├── TIPO_DADO
+│       │       │       │   │   └── integer
+│       │       │       │   └── ;
+│       │       │       └── DEF_VAR
+│       │       │           └── None
+│       │       ├── begin
+│       │       ├── COMANDO
+│       │       │   ├── i
+│       │       │   ├── NOME
+│       │       │   │   └── None
+│       │       │   ├── :=
+│       │       │   └── EXP_MAT_AUX
+│       │       │       └── PARAMETRO
+│       │       │           └── 1
+│       │       ├── LISTA_COM
+│       │       │   ├── ;
+│       │       │   ├── COMANDO
+│       │       │   │   ├── result
+│       │       │   │   ├── NOME
+│       │       │   │   │   └── None
+│       │       │   │   ├── :=
+│       │       │   │   └── EXP_MAT_AUX
+│       │       │   │       └── PARAMETRO
+│       │       │   │           └── 1
+│       │       │   └── LISTA_COM
+│       │       │       ├── ;
+│       │       │       ├── COMANDO
+│       │       │       │   ├── while
+│       │       │       │   ├── EXP_LOGICA
+│       │       │       │   │   ├── EXP_MAT_AUX
+│       │       │       │   │   │   └── PARAMETRO
+│       │       │       │   │   │       ├── i
+│       │       │       │   │   │       └── NOME
+│       │       │       │   │   │           └── None
+│       │       │       │   │   ├── OP_LOGICO
+│       │       │       │   │   │   └── <
+│       │       │       │   │   └── EXP_LOGICA
+│       │       │       │   │       └── EXP_MAT_AUX
+│       │       │       │   │           └── PARAMETRO
+│       │       │       │   │               ├── a
+│       │       │       │   │               └── NOME
+│       │       │       │   │                   └── None
+│       │       │       │   └── BLOCO
+│       │       │       │       ├── begin
+│       │       │       │       ├── COMANDO
+│       │       │       │       │   ├── result
+│       │       │       │       │   ├── NOME
+│       │       │       │       │   │   └── None
+│       │       │       │       │   ├── :=
+│       │       │       │       │   └── EXP_MAT_AUX
+│       │       │       │       │       ├── PARAMETRO
+│       │       │       │       │       │   ├── result
+│       │       │       │       │       │   └── NOME
+│       │       │       │       │       │       └── None
+│       │       │       │       │       ├── OP_MAT
+│       │       │       │       │       │   └── *
+│       │       │       │       │       └── EXP_MAT_AUX
+│       │       │       │       │           └── PARAMETRO
+│       │       │       │       │               ├── i
+│       │       │       │       │               └── NOME
+│       │       │       │       │                   └── None
+│       │       │       │       ├── LISTA_COM
+│       │       │       │       │   ├── ;
+│       │       │       │       │   ├── COMANDO
+│       │       │       │       │   │   ├── i
+│       │       │       │       │   │   ├── NOME
+│       │       │       │       │   │   │   └── None
+│       │       │       │       │   │   ├── :=
+│       │       │       │       │   │   └── EXP_MAT_AUX
+│       │       │       │       │   │       ├── PARAMETRO
+│       │       │       │       │   │       │   ├── i
+│       │       │       │       │   │       │   └── NOME
+│       │       │       │       │   │       │       └── None
+│       │       │       │       │   │       ├── OP_MAT
+│       │       │       │       │   │       │   └── +
+│       │       │       │       │   │       └── EXP_MAT_AUX
+│       │       │       │       │   │           └── PARAMETRO
+│       │       │       │       │   │               └── 1
+│       │       │       │       │   └── LISTA_COM
+│       │       │       │       │       └── None
+│       │       │       │       └── end
+│       │       │       └── LISTA_COM
+│       │       │           └── None
+│       │       └── end
+│       └── DEF_FUNC
+│           ├── FUNCAO
+│           │   ├── function
+│           │   ├── NOME_FUNCAO
+│           │   │   ├── exp
+│           │   │   ├── PARAM_FUNC
+│           │   │   │   ├── (
+│           │   │   │   ├── CAMPOS
+│           │   │   │   │   ├── a
+│           │   │   │   │   ├── :
+│           │   │   │   │   ├── TIPO_DADO
+│           │   │   │   │   │   └── real
+│           │   │   │   │   └── LISTA_CAMPOS
+│           │   │   │   │       ├── ;
+│           │   │   │   │       ├── CAMPOS
+│           │   │   │   │       │   ├── b
+│           │   │   │   │       │   ├── :
+│           │   │   │   │       │   ├── TIPO_DADO
+│           │   │   │   │       │   │   └── real
+│           │   │   │   │       │   └── LISTA_CAMPOS
+│           │   │   │   │       │       └── None
+│           │   │   │   │       └── LISTA_CAMPOS
+│           │   │   │   │           └── None
+│           │   │   │   └── )
+│           │   │   ├── :
+│           │   │   └── TIPO_DADO
+│           │   │       └── real
+│           │   └── BLOCO_FUNCAO
+│           │       ├── DEF_VAR
+│           │       │   ├── VARIAVEL
+│           │       │   │   ├── var
+│           │       │   │   ├── i
+│           │       │   │   ├── LISTA_ID
+│           │       │   │   │   └── None
+│           │       │   │   ├── :
+│           │       │   │   ├── TIPO_DADO
+│           │       │   │   │   └── integer
+│           │       │   │   └── ;
+│           │       │   └── DEF_VAR
+│           │       │       └── None
+│           │       ├── begin
+│           │       ├── COMANDO
+│           │       │   ├── i
+│           │       │   ├── NOME
+│           │       │   │   └── None
+│           │       │   ├── :=
+│           │       │   └── EXP_MAT_AUX
+│           │       │       └── PARAMETRO
+│           │       │           └── 1
+│           │       ├── LISTA_COM
+│           │       │   ├── ;
+│           │       │   ├── COMANDO
+│           │       │   │   ├── result
+│           │       │   │   ├── NOME
+│           │       │   │   │   └── None
+│           │       │   │   ├── :=
+│           │       │   │   └── EXP_MAT_AUX
+│           │       │   │       └── PARAMETRO
+│           │       │   │           ├── a
+│           │       │   │           └── NOME
+│           │       │   │               └── None
+│           │       │   └── LISTA_COM
+│           │       │       ├── ;
+│           │       │       ├── COMANDO
+│           │       │       │   ├── if
+│           │       │       │   ├── EXP_LOGICA
+│           │       │       │   │   ├── EXP_MAT_AUX
+│           │       │       │   │   │   └── PARAMETRO
+│           │       │       │   │   │       ├── b
+│           │       │       │   │   │       └── NOME
+│           │       │       │   │   │           └── None
+│           │       │       │   │   ├── OP_LOGICO
+│           │       │       │   │   │   └── =
+│           │       │       │   │   └── EXP_LOGICA
+│           │       │       │   │       └── EXP_MAT_AUX
+│           │       │       │   │           └── PARAMETRO
+│           │       │       │   │               └── 0
+│           │       │       │   ├── then
+│           │       │       │   ├── BLOCO
+│           │       │       │   │   └── COMANDO
+│           │       │       │   │       ├── result
+│           │       │       │   │       ├── NOME
+│           │       │       │   │       │   └── None
+│           │       │       │   │       ├── :=
+│           │       │       │   │       └── EXP_MAT_AUX
+│           │       │       │   │           └── PARAMETRO
+│           │       │       │   │               └── 1
+│           │       │       │   └── SIN_ELSE
+│           │       │       │       ├── else
+│           │       │       │       └── BLOCO
+│           │       │       │           └── COMANDO
+│           │       │       │               ├── while
+│           │       │       │               ├── EXP_LOGICA
+│           │       │       │               │   ├── EXP_MAT_AUX
+│           │       │       │               │   │   └── PARAMETRO
+│           │       │       │               │   │       ├── i
+│           │       │       │               │   │       └── NOME
+│           │       │       │               │   │           └── None
+│           │       │       │               │   ├── OP_LOGICO
+│           │       │       │               │   │   └── <
+│           │       │       │               │   └── EXP_LOGICA
+│           │       │       │               │       └── EXP_MAT_AUX
+│           │       │       │               │           └── PARAMETRO
+│           │       │       │               │               ├── b
+│           │       │       │               │               └── NOME
+│           │       │       │               │                   └── None
+│           │       │       │               └── BLOCO
+│           │       │       │                   ├── begin
+│           │       │       │                   ├── COMANDO
+│           │       │       │                   │   ├── result
+│           │       │       │                   │   ├── NOME
+│           │       │       │                   │   │   └── None
+│           │       │       │                   │   ├── :=
+│           │       │       │                   │   └── EXP_MAT_AUX
+│           │       │       │                   │       ├── PARAMETRO
+│           │       │       │                   │       │   ├── a
+│           │       │       │                   │       │   └── NOME
+│           │       │       │                   │       │       └── None
+│           │       │       │                   │       ├── OP_MAT
+│           │       │       │                   │       │   └── *
+│           │       │       │                   │       └── EXP_MAT_AUX
+│           │       │       │                   │           └── PARAMETRO
+│           │       │       │                   │               ├── a
+│           │       │       │                   │               └── NOME
+│           │       │       │                   │                   └── None
+│           │       │       │                   ├── LISTA_COM
+│           │       │       │                   │   ├── ;
+│           │       │       │                   │   ├── COMANDO
+│           │       │       │                   │   │   ├── i
+│           │       │       │                   │   │   ├── NOME
+│           │       │       │                   │   │   │   └── None
+│           │       │       │                   │   │   ├── :=
+│           │       │       │                   │   │   └── EXP_MAT_AUX
+│           │       │       │                   │   │       ├── PARAMETRO
+│           │       │       │                   │   │       │   ├── i
+│           │       │       │                   │   │       │   └── NOME
+│           │       │       │                   │   │       │       └── None
+│           │       │       │                   │   │       ├── OP_MAT
+│           │       │       │                   │   │       │   └── +
+│           │       │       │                   │   │       └── EXP_MAT_AUX
+│           │       │       │                   │   │           └── PARAMETRO
+│           │       │       │                   │   │               └── 1
+│           │       │       │                   │   └── LISTA_COM
+│           │       │       │                   │       └── None
+│           │       │       │                   └── end
+│           │       │       └── LISTA_COM
+│           │       │           └── None
+│           │       └── end
+│           └── DEF_FUNC
+│               ├── FUNCAO
+│               │   ├── function
+│               │   ├── NOME_FUNCAO
+│               │   │   ├── lerDados
+│               │   │   ├── PARAM_FUNC
+│               │   │   │   └── None
+│               │   │   ├── :
+│               │   │   └── TIPO_DADO
+│               │   │       └── aluno
+│               │   └── BLOCO_FUNCAO
+│               │       ├── DEF_VAR
+│               │       │   └── None
+│               │       ├── begin
+│               │       ├── COMANDO
+│               │       │   ├── write
+│               │       │   └── CONST_VALOR
+│               │       │       └── digite as notas do aluno
+│               │       ├── LISTA_COM
+│               │       │   ├── ;
+│               │       │   ├── COMANDO
+│               │       │   │   ├── read
+│               │       │   │   ├── result
+│               │       │   │   └── NOME
+│               │       │   │       ├── .
+│               │       │   │       ├── nota1
+│               │       │   │       └── NOME
+│               │       │   │           └── None
+│               │       │   └── LISTA_COM
+│               │       │       ├── ;
+│               │       │       ├── COMANDO
+│               │       │       │   ├── read
+│               │       │       │   ├── result
+│               │       │       │   └── NOME
+│               │       │       │       ├── .
+│               │       │       │       ├── nota2
+│               │       │       │       └── NOME
+│               │       │       │           └── None
+│               │       │       └── LISTA_COM
+│               │       │           └── None
+│               │       └── end
+│               └── DEF_FUNC
+│                   ├── FUNCAO
+│                   │   ├── function
+│                   │   ├── NOME_FUNCAO
+│                   │   │   ├── maior
+│                   │   │   ├── PARAM_FUNC
+│                   │   │   │   ├── (
+│                   │   │   │   ├── CAMPOS
+│                   │   │   │   │   ├── a
+│                   │   │   │   │   ├── :
+│                   │   │   │   │   ├── TIPO_DADO
+│                   │   │   │   │   │   └── vetor
+│                   │   │   │   │   └── LISTA_CAMPOS
+│                   │   │   │   │       └── None
+│                   │   │   │   └── )
+│                   │   │   ├── :
+│                   │   │   └── TIPO_DADO
+│                   │   │       └── integer
+│                   │   └── BLOCO_FUNCAO
+│                   │       ├── DEF_VAR
+│                   │       │   ├── VARIAVEL
+│                   │       │   │   ├── var
+│                   │       │   │   ├── i
+│                   │       │   │   ├── LISTA_ID
+│                   │       │   │   │   └── None
+│                   │       │   │   ├── :
+│                   │       │   │   ├── TIPO_DADO
+│                   │       │   │   │   └── integer
+│                   │       │   │   └── ;
+│                   │       │   └── DEF_VAR
+│                   │       │       └── None
+│                   │       ├── begin
+│                   │       ├── COMANDO
+│                   │       │   ├── i
+│                   │       │   ├── NOME
+│                   │       │   │   └── None
+│                   │       │   ├── :=
+│                   │       │   └── EXP_MAT_AUX
+│                   │       │       └── PARAMETRO
+│                   │       │           └── 0
+│                   │       ├── LISTA_COM
+│                   │       │   ├── ;
+│                   │       │   ├── COMANDO
+│                   │       │   │   ├── result
+│                   │       │   │   ├── NOME
+│                   │       │   │   │   └── None
+│                   │       │   │   ├── :=
+│                   │       │   │   └── EXP_MAT_AUX
+│                   │       │   │       └── PARAMETRO
+│                   │       │   │           ├── a
+│                   │       │   │           └── NOME
+│                   │       │   │               ├── [
+│                   │       │   │               ├── PARAMETRO
+│                   │       │   │               │   └── 0
+│                   │       │   │               └── ]
+│                   │       │   └── LISTA_COM
+│                   │       │       ├── ;
+│                   │       │       ├── COMANDO
+│                   │       │       │   ├── while
+│                   │       │       │   ├── EXP_LOGICA
+│                   │       │       │   │   ├── EXP_MAT_AUX
+│                   │       │       │   │   │   └── PARAMETRO
+│                   │       │       │   │   │       ├── i
+│                   │       │       │   │   │       └── NOME
+│                   │       │       │   │   │           └── None
+│                   │       │       │   │   ├── OP_LOGICO
+│                   │       │       │   │   │   └── <
+│                   │       │       │   │   └── EXP_LOGICA
+│                   │       │       │   │       └── EXP_MAT_AUX
+│                   │       │       │   │           └── PARAMETRO
+│                   │       │       │   │               └── 15
+│                   │       │       │   └── BLOCO
+│                   │       │       │       └── COMANDO
+│                   │       │       │           ├── if
+│                   │       │       │           ├── EXP_LOGICA
+│                   │       │       │           │   ├── EXP_MAT_AUX
+│                   │       │       │           │   │   └── PARAMETRO
+│                   │       │       │           │   │       ├── a
+│                   │       │       │           │   │       └── NOME
+│                   │       │       │           │   │           ├── [
+│                   │       │       │           │   │           ├── PARAMETRO
+│                   │       │       │           │   │           │   ├── i
+│                   │       │       │           │   │           │   └── NOME
+│                   │       │       │           │   │           │       └── None
+│                   │       │       │           │   │           └── ]
+│                   │       │       │           │   ├── OP_LOGICO
+│                   │       │       │           │   │   └── >
+│                   │       │       │           │   └── EXP_LOGICA
+│                   │       │       │           │       └── EXP_MAT_AUX
+│                   │       │       │           │           └── PARAMETRO
+│                   │       │       │           │               ├── result
+│                   │       │       │           │               └── NOME
+│                   │       │       │           │                   └── None
+│                   │       │       │           ├── then
+│                   │       │       │           ├── BLOCO
+│                   │       │       │           │   └── COMANDO
+│                   │       │       │           │       ├── result
+│                   │       │       │           │       ├── NOME
+│                   │       │       │           │       │   └── None
+│                   │       │       │           │       ├── :=
+│                   │       │       │           │       └── EXP_MAT_AUX
+│                   │       │       │           │           └── PARAMETRO
+│                   │       │       │           │               ├── a
+│                   │       │       │           │               └── NOME
+│                   │       │       │           │                   ├── [
+│                   │       │       │           │                   ├── PARAMETRO
+│                   │       │       │           │                   │   ├── i
+│                   │       │       │           │                   │   └── NOME
+│                   │       │       │           │                   │       └── None
+│                   │       │       │           │                   └── ]
+│                   │       │       │           └── SIN_ELSE
+│                   │       │       │               └── None
+│                   │       │       └── LISTA_COM
+│                   │       │           └── None
+│                   │       └── end
+│                   └── DEF_FUNC
+│                       ├── FUNCAO
+│                       │   ├── function
+│                       │   ├── NOME_FUNCAO
+│                       │   │   ├── menor
+│                       │   │   ├── PARAM_FUNC
+│                       │   │   │   ├── (
+│                       │   │   │   ├── CAMPOS
+│                       │   │   │   │   ├── a
+│                       │   │   │   │   ├── :
+│                       │   │   │   │   ├── TIPO_DADO
+│                       │   │   │   │   │   └── vetor
+│                       │   │   │   │   └── LISTA_CAMPOS
+│                       │   │   │   │       └── None
+│                       │   │   │   └── )
+│                       │   │   ├── :
+│                       │   │   └── TIPO_DADO
+│                       │   │       └── integer
+│                       │   └── BLOCO_FUNCAO
+│                       │       ├── DEF_VAR
+│                       │       │   ├── VARIAVEL
+│                       │       │   │   ├── var
+│                       │       │   │   ├── i
+│                       │       │   │   ├── LISTA_ID
+│                       │       │   │   │   └── None
+│                       │       │   │   ├── :
+│                       │       │   │   ├── TIPO_DADO
+│                       │       │   │   │   └── integer
+│                       │       │   │   └── ;
+│                       │       │   └── DEF_VAR
+│                       │       │       └── None
+│                       │       ├── begin
+│                       │       ├── COMANDO
+│                       │       │   ├── i
+│                       │       │   ├── NOME
+│                       │       │   │   └── None
+│                       │       │   ├── :=
+│                       │       │   └── EXP_MAT_AUX
+│                       │       │       └── PARAMETRO
+│                       │       │           └── 0
+│                       │       ├── LISTA_COM
+│                       │       │   ├── ;
+│                       │       │   ├── COMANDO
+│                       │       │   │   ├── result
+│                       │       │   │   ├── NOME
+│                       │       │   │   │   └── None
+│                       │       │   │   ├── :=
+│                       │       │   │   └── EXP_MAT_AUX
+│                       │       │   │       └── PARAMETRO
+│                       │       │   │           ├── a
+│                       │       │   │           └── NOME
+│                       │       │   │               ├── [
+│                       │       │   │               ├── PARAMETRO
+│                       │       │   │               │   └── 16
+│                       │       │   │               └── ]
+│                       │       │   └── LISTA_COM
+│                       │       │       ├── ;
+│                       │       │       ├── COMANDO
+│                       │       │       │   ├── while
+│                       │       │       │   ├── EXP_LOGICA
+│                       │       │       │   │   ├── EXP_MAT_AUX
+│                       │       │       │   │   │   └── PARAMETRO
+│                       │       │       │   │   │       ├── i
+│                       │       │       │   │   │       └── NOME
+│                       │       │       │   │   │           └── None
+│                       │       │       │   │   ├── OP_LOGICO
+│                       │       │       │   │   │   └── <
+│                       │       │       │   │   └── EXP_LOGICA
+│                       │       │       │   │       └── EXP_MAT_AUX
+│                       │       │       │   │           └── PARAMETRO
+│                       │       │       │   │               └── 15
+│                       │       │       │   └── BLOCO
+│                       │       │       │       └── COMANDO
+│                       │       │       │           ├── if
+│                       │       │       │           ├── EXP_LOGICA
+│                       │       │       │           │   ├── EXP_MAT_AUX
+│                       │       │       │           │   │   └── PARAMETRO
+│                       │       │       │           │   │       ├── a
+│                       │       │       │           │   │       └── NOME
+│                       │       │       │           │   │           ├── [
+│                       │       │       │           │   │           ├── PARAMETRO
+│                       │       │       │           │   │           │   ├── i
+│                       │       │       │           │   │           │   └── NOME
+│                       │       │       │           │   │           │       └── None
+│                       │       │       │           │   │           └── ]
+│                       │       │       │           │   ├── OP_LOGICO
+│                       │       │       │           │   │   └── <
+│                       │       │       │           │   └── EXP_LOGICA
+│                       │       │       │           │       └── EXP_MAT_AUX
+│                       │       │       │           │           └── PARAMETRO
+│                       │       │       │           │               ├── result
+│                       │       │       │           │               └── NOME
+│                       │       │       │           │                   └── None
+│                       │       │       │           ├── then
+│                       │       │       │           ├── BLOCO
+│                       │       │       │           │   └── COMANDO
+│                       │       │       │           │       ├── result
+│                       │       │       │           │       ├── NOME
+│                       │       │       │           │       │   └── None
+│                       │       │       │           │       ├── :=
+│                       │       │       │           │       └── EXP_MAT_AUX
+│                       │       │       │           │           └── PARAMETRO
+│                       │       │       │           │               ├── a
+│                       │       │       │           │               └── NOME
+│                       │       │       │           │                   ├── [
+│                       │       │       │           │                   ├── PARAMETRO
+│                       │       │       │           │                   │   ├── i
+│                       │       │       │           │                   │   └── NOME
+│                       │       │       │           │                   │       └── None
+│                       │       │       │           │                   └── ]
+│                       │       │       │           └── SIN_ELSE
+│                       │       │       │               └── None
+│                       │       │       └── LISTA_COM
+│                       │       │           └── None
+│                       │       └── end
+│                       └── DEF_FUNC
+│                           ├── FUNCAO
+│                           │   ├── function
+│                           │   ├── NOME_FUNCAO
+│                           │   │   ├── media
+│                           │   │   ├── PARAM_FUNC
+│                           │   │   │   ├── (
+│                           │   │   │   ├── CAMPOS
+│                           │   │   │   │   ├── a
+│                           │   │   │   │   ├── :
+│                           │   │   │   │   ├── TIPO_DADO
+│                           │   │   │   │   │   └── vetor
+│                           │   │   │   │   └── LISTA_CAMPOS
+│                           │   │   │   │       └── None
+│                           │   │   │   └── )
+│                           │   │   ├── :
+│                           │   │   └── TIPO_DADO
+│                           │   │       └── integer
+│                           │   └── BLOCO_FUNCAO
+│                           │       ├── DEF_VAR
+│                           │       │   ├── VARIAVEL
+│                           │       │   │   ├── var
+│                           │       │   │   ├── m
+│                           │       │   │   ├── LISTA_ID
+│                           │       │   │   │   └── None
+│                           │       │   │   ├── :
+│                           │       │   │   ├── TIPO_DADO
+│                           │       │   │   │   └── integer
+│                           │       │   │   └── ;
+│                           │       │   └── DEF_VAR
+│                           │       │       └── None
+│                           │       ├── begin
+│                           │       ├── COMANDO
+│                           │       │   ├── m
+│                           │       │   ├── NOME
+│                           │       │   │   └── None
+│                           │       │   ├── :=
+│                           │       │   └── EXP_MAT_AUX
+│                           │       │       ├── PARAMETRO
+│                           │       │       │   ├── maior
+│                           │       │       │   └── NOME
+│                           │       │       │       ├── (
+│                           │       │       │       ├── LISTA_PARAM
+│                           │       │       │       │   └── PARAMETRO
+│                           │       │       │       │       ├── a
+│                           │       │       │       │       └── NOME
+│                           │       │       │       │           └── None
+│                           │       │       │       └── )
+│                           │       │       ├── OP_MAT
+│                           │       │       │   └── +
+│                           │       │       └── EXP_MAT_AUX
+│                           │       │           └── PARAMETRO
+│                           │       │               ├── menor
+│                           │       │               └── NOME
+│                           │       │                   ├── (
+│                           │       │                   ├── LISTA_PARAM
+│                           │       │                   │   └── PARAMETRO
+│                           │       │                   │       ├── a
+│                           │       │                   │       └── NOME
+│                           │       │                   │           └── None
+│                           │       │                   └── )
+│                           │       ├── LISTA_COM
+│                           │       │   ├── ;
+│                           │       │   ├── COMANDO
+│                           │       │   │   ├── result
+│                           │       │   │   ├── NOME
+│                           │       │   │   │   └── None
+│                           │       │   │   ├── :=
+│                           │       │   │   └── EXP_MAT_AUX
+│                           │       │   │       ├── PARAMETRO
+│                           │       │   │       │   ├── m
+│                           │       │   │       │   └── NOME
+│                           │       │   │       │       └── None
+│                           │       │   │       ├── OP_MAT
+│                           │       │   │       │   └── /
+│                           │       │   │       └── EXP_MAT_AUX
+│                           │       │   │           └── PARAMETRO
+│                           │       │   │               └── 2
+│                           │       │   └── LISTA_COM
+│                           │       │       └── None
+│                           │       └── end
+│                           └── DEF_FUNC
+│                               └── None
+└── PRINCIPAL
+    ├── begin
+    ├── COMANDO
+    │   ├── A
+    │   ├── NOME
+    │   │   └── None
+    │   ├── :=
+    │   └── EXP_MAT_AUX
+    │       ├── PARAMETRO
+    │       │   ├── TAM
+    │       │   └── NOME
+    │       │       └── None
+    │       ├── OP_MAT
+    │       │   └── +
+    │       └── EXP_MAT_AUX
+    │           └── PARAMETRO
+    │               └── 20
+    ├── LISTA_COM
+    │   ├── ;
+    │   ├── COMANDO
+    │   │   ├── E
+    │   │   ├── NOME
+    │   │   │   └── None
+    │   │   ├── :=
+    │   │   └── EXP_MAT_AUX
+    │   │       └── PARAMETRO
+    │   │           ├── K
+    │   │           └── NOME
+    │   │               └── None
+    │   └── LISTA_COM
+    │       ├── ;
+    │       ├── COMANDO
+    │       │   ├── B
+    │       │   ├── NOME
+    │       │   │   └── None
+    │       │   ├── :=
+    │       │   └── EXP_MAT_AUX
+    │       │       └── PARAMETRO
+    │       │           ├── fatorial
+    │       │           └── NOME
+    │       │               ├── (
+    │       │               ├── LISTA_PARAM
+    │       │               │   └── PARAMETRO
+    │       │               │       └── 5
+    │       │               └── )
+    │       └── LISTA_COM
+    │           ├── ;
+    │           ├── COMANDO
+    │           │   ├── C
+    │           │   ├── NOME
+    │           │   │   └── None
+    │           │   ├── :=
+    │           │   └── EXP_MAT_AUX
+    │           │       └── PARAMETRO
+    │           │           ├── exp
+    │           │           └── NOME
+    │           │               ├── (
+    │           │               ├── LISTA_PARAM
+    │           │               │   ├── PARAMETRO
+    │           │               │   │   ├── A
+    │           │               │   │   └── NOME
+    │           │               │   │       └── None
+    │           │               │   ├── ,
+    │           │               │   └── LISTA_PARAM
+    │           │               │       └── PARAMETRO
+    │           │               │           ├── B
+    │           │               │           └── NOME
+    │           │               │               └── None
+    │           │               └── )
+    │           └── LISTA_COM
+    │               ├── ;
+    │               ├── COMANDO
+    │               │   ├── D
+    │               │   ├── NOME
+    │               │   │   └── None
+    │               │   ├── :=
+    │               │   └── EXP_MAT_AUX
+    │               │       └── PARAMETRO
+    │               │           ├── media
+    │               │           └── NOME
+    │               │               ├── (
+    │               │               ├── LISTA_PARAM
+    │               │               │   └── PARAMETRO
+    │               │               │       ├── E
+    │               │               │       └── NOME
+    │               │               │           └── None
+    │               │               └── )
+    │               └── LISTA_COM
+    │                   ├── ;
+    │                   ├── COMANDO
+    │                   │   ├── F
+    │                   │   ├── NOME
+    │                   │   │   └── None
+    │                   │   ├── :=
+    │                   │   └── EXP_MAT_AUX
+    │                   │       └── PARAMETRO
+    │                   │           ├── lerDados
+    │                   │           └── NOME
+    │                   │               ├── (
+    │                   │               ├── LISTA_PARAM
+    │                   │               │   └── PARAMETRO
+    │                   │               │       ├── G
+    │                   │               │       └── NOME
+    │                   │               │           └── None
+    │                   │               └── )
+    │                   └── LISTA_COM
+    │                       └── None
+    └── end

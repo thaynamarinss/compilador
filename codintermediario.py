@@ -49,11 +49,15 @@ def generate_intermediate_code(node):
                 tempR = generate_intermediate_code(node[2]) #exp_logica
                 #SALTA SE O TEMP FOR 0 (FALSE)
                 intermediate_code.append(f"JEZ {labelIFFalse} {tempR}")
-        
-                generate_intermediate_code(node[4]) #bloco
-                intermediate_code.append(f"LBL {labelIFFalse} - -")
-                generate_intermediate_code(node[5]) #else
+                labelendIF =f"label{label_counter}"
+                label_counter += 1
                 
+                generate_intermediate_code(node[4]) #bloco
+                intermediate_code.append(f"JMP {labelendIF} - -")#pular para o final do if
+                intermediate_code.append(f"LBL {labelIFFalse} - -") #label do else
+                generate_intermediate_code(node[5]) #else
+
+                intermediate_code.append(f"LBL {labelendIF}") #label final if
 
            
             elif node[1] == 'write':
